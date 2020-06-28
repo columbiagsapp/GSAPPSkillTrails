@@ -245,7 +245,13 @@ export default {
           e.preventDefault();
           return true;
         },
-        filterKey: () => true
+        filterKey: () => true,
+          onTouch: function(e) {
+    // `e` - is current touch event.
+
+            var touchedWaypoint = e.target.classList.contains("waypointtext")
+            return !touchedWaypoint;
+  }
       });
 
       if(this.currentlyViewingWaypoint) {

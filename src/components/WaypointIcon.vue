@@ -39,7 +39,7 @@
       >
         <div class="circle colorfilter">
           <!-- <img :src="ThumbUrl" /> -->
-          <div class="text" v-if="!hidetext">
+          <div class="text waypointtext" v-if="!hidetext">
             {{ waypointdata.fields.Name }}
           </div>
         </div>
@@ -315,6 +315,10 @@ img {
 
 g.shape {
   cursor: pointer;
+}
+
+.waypoint {
+  position: relative;
 }
 
 .polygonBorder {
